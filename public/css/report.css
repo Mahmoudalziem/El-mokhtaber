@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body-container {
+  padding: 30px;
+  direction: ltr;
+  background: #fff;
+}
+.body-container header {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  align-items: center;
+}
+.body-container header div:first-child {
+  line-height: 40px;
+}
+.body-container header div.info h2 {
+  font-size: 25px;
+}
+.body-container .container-fluid {
+  height: 242px;
+  padding: 0;
+  border: solid 2px grey;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.body-container .container-fluid .left {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 95px;
+}
+.body-container .container-fluid .left div {
+  border: solid 1.5px black;
+}
+.body-container .container-fluid .left .name {
+  grid-column: span 3;
+  padding-top: 30px;
+}
+.body-container .container-fluid .left .name h4 {
+  color: #4550dd;
+}
+.body-container .container-fluid .left .name h3 {
+  padding-top: 15px;
+}
+.body-container .container-fluid .right {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 120px 95px;
+}
+.body-container .container-fluid .right > div {
+  border: solid 1.5px black;
+}
+.body-container .container-fluid .right .date {
+  display: flex;
+  grid-template-rows: repeat(2, 59px);
+  grid-column: span 3;
+  align-items: center;
+}
+.body-container .container-fluid .right .date .col-5,
+.body-container .container-fluid .right .date .col-2 {
+  text-align: left;
+}
+.body-container .container-fluid .right .date .top,
+.body-container .container-fluid .right .date .bottom {
+  display: flex;
+}
+.body-container .container-fluid .right .date h4 {
+  margin-right: 8px;
+  width: 180px;
+  text-transform: capitalize;
+}
+.body-container .container-fluid .right .date p {
+  margin-bottom: 3px !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+.body-container .container-fluid .right .client-id {
+  padding: 0 20px;
+}
+.body-container .container-fluid .left,
+.body-container .container-fluid .right {
+  padding: 10px;
+}
+.body-container .container-fluid h3 {
+  padding-top: 30px;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+.body-container .result {
+  display: flex;
+  flex-direction: column;
+}
+.body-container .result .top-title {
+  text-align: center;
+  margin-inline: auto;
+  font-size: 20px;
+  width: 100%;
+  background-color: #a7a3a3;
+  padding-block: 4px;
+  border: 2px solid #000;
+}
+.body-container .result .lab-title {
+  padding: 25px;
+  width: 90%;
+  float: left;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px 35px;
+}
+.body-container .result .lab-title h4 {
+  text-transform: capitalize;
+}
+.body-container .first-footer {
+  width: 100%;
+  min-height: 30px;
+  margin-bottom: 5rem;
+}
+.body-container .first-footer img {
+  width: 100%;
+}
+.body-container .header2 {
+  width: 100%;
+  text-align: center;
+}
+.body-container .container2 {
+  height: 215px;
+  border: solid 2px grey;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-block: 10px;
+}
+.body-container .container2 .left {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 95px;
+}
+.body-container .container2 .left div {
+  border: solid 1.5px black;
+}
+.body-container .container2 .left .name {
+  grid-column: span 3;
+  padding-top: 30px;
+}
+.body-container .container2 .left .name h4 {
+  color: #4550dd;
+}
+.body-container .container2 .left .name h3 {
+  padding-top: 15px;
+}
+.body-container .container2 .right {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px 95px;
+}
+.body-container .container2 .right div {
+  border: solid 1.5px black;
+}
+.body-container .container2 .right .date {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 59px);
+  grid-column: span 3;
+}
+.body-container .container2 .right .date div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.body-container .container2 .right .date h4 {
+  margin-right: 8px;
+}
+.body-container .container2 h3 {
+  padding-top: 30px;
+  margin-bottom: 5px;
+}
+.body-container .table {
+  width: 70rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  text-align: center;
+}
+.body-container .table div {
+  border: solid 1.5px black;
+  padding: 15px;
+}
+.body-container .table div:nth-child(1) {
+  background-color: #b09caf;
+}
+.body-container .table div:nth-child(2) {
+  background-color: #b09caf;
+}
+.body-container .table div:nth-child(3) {
+  background-color: #979797;
+}
+.body-container .price {
+  grid-template-columns: 3fr 1fr;
+  margin-top: 30px;
+}
+.body-container .price .left {
+  display: flex;
+  flex-direction: column;
+}
+.body-container .price .left .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  line-height: 2rem;
+}
+.body-container .price .left .bottom {
+  border: solid 1.5px black;
+  text-align: center;
+  width: 45rem;
+  padding: 10px 20px;
+}
+.body-container .price .right {
+  display: flex;
+  flex-direction: column;
+}
+.body-container .price .right div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1.7rem;
+}
+.body-container .footer2 {
+  width: 100%;
+}
+.body-container .footer2 img {
+  width: 100%;
+}
+.body-container .main-body {
+  height: 37rem;
+}
+.body-container .extra {
+  display: flex;
+  justify-content: space-between;
+}
