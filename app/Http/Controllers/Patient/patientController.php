@@ -141,6 +141,7 @@ class patientController extends Controller
             // ->setNodeBinary('/usr/local/bin/node')
             // ->setNpmBinary('/usr/local/bin/npm')
             // ->landscape()
+            ->setIncludePath('$PATH:/usr/local/bin')
             ->paperSize(430, 260)
             ->download($data->name . '.pdf');
     }
