@@ -77,7 +77,7 @@
 
                     <div class="mb-3">
                         <select name="gender" id="inputState" class="form-select">
-                            <option value="">اختار الفرع ...</option>
+                            <option value="">اختار الجنس ...</option>
                             <option {{ old('male') == 'male' ? 'Selected' : '' }} value="male">ذكر</option>
                             <option {{ old('female') == 'female' ? 'Selected' : '' }} value="female">انثي</option>
                         </select>
