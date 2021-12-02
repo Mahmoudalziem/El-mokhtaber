@@ -6,7 +6,7 @@
 
 
 @section('links')
-    <link rel="stylesheet" href="css/report.css" />
+    <link rel="stylesheet" href="/css/report.css" />
 @endsection
 
 @section('content')

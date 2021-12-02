@@ -10,16 +10,16 @@
     <title>@yield('title')</title>
     <meta name="description" content="Hello El-Mokhtaber" />
     <meta name="author" content="Mahmoud Abd Alziem" />
-    <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/app.css" />
     @yield('meta_tags')
     @yield('links')
 </head>
 
 <body>
     @yield('content')
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/app.js"></script>
 
     @yield('scripts')
 </body>
