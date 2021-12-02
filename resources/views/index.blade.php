@@ -32,9 +32,9 @@
                     <td>{{$item->result}}</td>
                     <td>{{$item->client_id}}</td>
                     <td>{{$item->created_at}}</td>
-                    <td><a href={{url('patient/'.$item->client_id)}} target='_blank'><button class="btn btn-primary">  View  </button></a></td>
-                </tr> 
-            @endforeach         
+                    <td><a href={{url('report/'.$item->client_id)}} target='_blank'><button class="btn btn-primary">  View  </button></a></td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

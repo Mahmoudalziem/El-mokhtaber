@@ -139,9 +139,9 @@ class patientController extends Controller
 
         return PDF::loadView('report', ['data' => $data])
             // ->setNodeBinary('/usr/local/bin/node')
-            // ->setNpmBinary('/usr/local/bin/npm')
+             // ->setNpmBinary('/usr/local/bin/npm')
             // ->landscape()
-            ->setIncludePath('$PATH:/usr/local/bin')
+            // ->setIncludePath(base_path('node_modules/puppeteer/lib/cjs/puppeteer/node') . ':/usr/local/bin')
             ->paperSize(430, 260)
             ->download($data->name . '.pdf');
     }
