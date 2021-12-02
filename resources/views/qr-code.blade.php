@@ -18,7 +18,7 @@
     @endif
     <div class="form-add">
         <div class="mx-auto qr-image">
-            <img width="300px" height="110px" src="img/logo.png" alt="">
+            <img width="300px" height="110px" src="/img/logo.png" alt="">
         </div>
         <div class="qr mx-auto mt-5 text-center position-relative">
             <div id="qrCode">
