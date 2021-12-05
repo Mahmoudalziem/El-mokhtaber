@@ -152,6 +152,7 @@
             grid-template-rows: 120px 95px;
             div {
                 border: solid 1.5px black;
+                padding: 0 10px;
             }
             .name {
                 grid-column: span 3;

@@ -64,6 +64,7 @@
 
         .body-container .container-fluid .left div {
             border: solid 1.5px black;
+            padding:0 10px;
         }
 
         .body-container .container-fluid .left .name {
