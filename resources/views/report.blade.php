@@ -523,7 +523,7 @@
             </div>
         </div>
         <div class="price">
-            <div class="container">
+            <div class="container" style="max-width:1050px">
                 <div class="row">
                     <div class="col-md-9 col-12">
                         <div class="left">
