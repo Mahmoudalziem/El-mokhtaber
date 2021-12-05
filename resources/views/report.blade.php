@@ -10,9 +10,317 @@
     <title>طباعة نقرير</title>
     <meta name="description" content="Hello El-Mokhtaber" />
     <meta name="author" content="Mahmoud Abd Alziem" />
-    <link rel="icon" href="/img/logo.png">
+    <link rel="icon" href="{{ public_path('/img/logo.png') }}">
     <link rel="stylesheet" href="{{ public_path('/css/app.css') }}" />
-    <link rel="stylesheet" href="{{ public_path('/css/report.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ public_path('/css/report.css') }}" /> --}}
+    <style>
+        html {
+            -webkit-print-color-adjust: exact;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .body-container {
+            padding: 30px;
+            direction: ltr;
+            background: #fff;
+        }
+
+        .body-container header {
+            display: flex;
+            justify-content: space-between;
+            text-align: right;
+            align-items: center;
+        }
+
+        .body-container header div:first-child {
+            line-height: 40px;
+        }
+
+        .body-container header div.info h2 {
+            font-size: 25px;
+        }
+
+        .body-container .container-fluid {
+            height: 242px;
+            padding: 0;
+            border: solid 2px grey;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .body-container .container-fluid .left {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 120px 95px;
+        }
+
+        .body-container .container-fluid .left div {
+            border: solid 1.5px black;
+        }
+
+        .body-container .container-fluid .left .name {
+            grid-column: span 3;
+            padding-top: 30px;
+        }
+
+        .body-container .container-fluid .left .name h4 {
+            color: #4550dd;
+        }
+
+        .body-container .container-fluid .left .name h3 {
+            padding: 2px;
+        }
+
+        .body-container .container-fluid .right {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 120px 95px;
+        }
+
+        .body-container .container-fluid .right>div {
+            border: solid 1.5px black;
+        }
+
+        .body-container .container-fluid .right .date {
+            display: flex;
+            grid-template-rows: repeat(2, 59px);
+            grid-column: span 3;
+            align-items: center;
+        }
+
+        .body-container .container-fluid .right .date .date-content {
+            display: flex;
+            text-align: left;
+        }
+
+        .body-container .container-fluid .right .date .col-5,
+        .body-container .container-fluid .right .date .col-2 {
+            text-align: left;
+        }
+
+        .body-container .container-fluid .right .date .top,
+        .body-container .container-fluid .right .date .bottom {
+            display: flex;
+        }
+
+        .body-container .container-fluid .right .date h4 {
+            margin-right: 8px;
+            width: 180px;
+            text-transform: capitalize;
+        }
+
+        .body-container .container-fluid .right .date p {
+            margin-bottom: 3px !important;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .body-container .container-fluid .right .client-id {
+            padding: 0 20px;
+        }
+
+        .body-container .container-fluid .left,
+        .body-container .container-fluid .right {
+            padding: 10px;
+        }
+
+        .body-container .container-fluid h3 {
+            padding-top: 30px;
+            margin-bottom: 5px;
+            font-size: 19px;
+        }
+
+        .body-container .result {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body-container .result .top-title {
+            text-align: center;
+            margin-inline: auto;
+            font-size: 20px;
+            width: 100%;
+            background-color: #a7a3a3;
+            padding-block: 4px;
+            border: 2px solid #000;
+        }
+
+        .body-container .result .lab-title {
+            padding: 25px;
+            width: 90%;
+            float: left;
+            padding-left: 5px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 50px 35px;
+        }
+
+        .body-container .result .lab-title h4 {
+            text-transform: capitalize;
+        }
+
+        .body-container .first-footer {
+            width: 100%;
+            min-height: 30px;
+            margin-bottom: 5rem;
+        }
+
+        .body-container .first-footer img {
+            width: 100%;
+        }
+
+        .body-container .header2 {
+            padding-top: 40px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .body-container .container2 {
+            height: 215px;
+            border: solid 2px grey;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            margin-block: 10px;
+        }
+
+        .body-container .container2 .left {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 120px 95px;
+        }
+
+        .body-container .container2 .left div {
+            border: solid 1.5px black;
+        }
+
+        .body-container .container2 .left .name {
+            grid-column: span 3;
+            padding-top: 30px;
+        }
+
+        .body-container .container2 .left .name h4 {
+            color: #4550dd;
+        }
+
+        .body-container .container2 .left .name h3 {
+            padding-top: 15px;
+        }
+
+        .body-container .container2 .right {
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 120px 95px;
+        }
+
+        .body-container .container2 .right div {
+            border: solid 1.5px black;
+        }
+
+        .body-container .container2 .right .date {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 59px);
+            grid-column: span 3;
+        }
+
+        .body-container .container2 .right .date div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .body-container .container2 .right .date h4 {
+            margin-right: 8px;
+        }
+
+        .body-container .container2 h3 {
+            padding-top: 30px;
+            margin-bottom: 5px;
+        }
+
+        .body-container .table .col-md-4 {
+            padding: 0 !important;
+            border: 1px solid #000;
+        }
+
+        .body-container .table .col-md-4 .header {
+            background-color: #bfbbbb;
+        }
+
+        .body-container .price {
+            grid-template-columns: 3fr 1fr;
+            margin-top: 30px;
+        }
+
+        .body-container .price .left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body-container .price .left .top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            line-height: 2rem;
+        }
+
+        .body-container .price .left .bottom {
+            border: solid 1.5px #afa9a9ad;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .body-container .price .right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body-container .price .right div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            line-height: 1.7rem;
+        }
+
+        .body-container .footer2 {
+            width: 100%;
+        }
+
+        .body-container .footer2 img {
+            width: 100%;
+        }
+
+        .body-container .main-body {
+            height: 37rem;
+        }
+
+        .body-container .extra {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .body-container .extra .scan {
+            background: #000;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 20px 20px 0 0;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -56,21 +364,29 @@
             </div>
             <div class="right">
                 <div class="date">
-                    <div>
-                        <h4>Registered</h4>
-                        <p>{{ $data->register }}</p>
-                    </div>
-                    <div>
-                        <h4>collected</h4>
-                        <p>{{ $data->collect }}</p>
-                    </div>
-                    <div>
-                        <h4>Authenticated</h4>
-                        <p>{{ $data->auth }}</p>
-                    </div>
-                    <div>
-                        <h4>printed</h4>
-                        <p>{{ $data->print }}</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="date-content">
+                                    <h4>Registered</h4>
+                                    <p>{{ $data->register }}</p>
+                                </div>
+                                <div class="date-content">
+                                    <h4>collected</h4>
+                                    <p>{{ $data->collect }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="date-content">
+                                    <h4>Authenticated</h4>
+                                    <p>{{ $data->auth }}</p>
+                                </div>
+                                <div class="date-content">
+                                    <h4>printed</h4>
+                                    <p>{{ $data->print }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="referred">
@@ -185,18 +501,30 @@
                 </div>
             </div>
         </div>
-        <div class="table">
-            <div>Item Type</div>
-            <div>Item Name</div>
-            <div>Value</div>
-            <div>Test</div>
-            <div>Immunity PCR</div>
-            <div>{{ $data->price }}</div>
+        <div class="container">
+            <div class="col-md-9 text-center">
+                <div class="table">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">Item Type</div>
+                            <div class="footer">Test</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Item Type</div>
+                            <div class="footer">Immunity PCR</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Value</div>
+                            <div class="footer">{{ $data->price }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="price">
             <div class="container">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <div class="left">
                             <div class="top">
                                 <div class="left-info">
@@ -215,7 +543,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="right">
                             <div>
                                 <h3>Total Amount:</h3>

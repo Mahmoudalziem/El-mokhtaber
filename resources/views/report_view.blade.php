@@ -50,21 +50,29 @@
             </div>
             <div class="right">
                 <div class="date">
-                    <div>
-                        <h4>Registered</h4>
-                        <p>{{ $data->register }}</p>
-                    </div>
-                    <div>
-                        <h4>collected</h4>
-                        <p>{{ $data->collect }}</p>
-                    </div>
-                    <div>
-                        <h4>Authenticated</h4>
-                        <p>{{ $data->auth }}</p>
-                    </div>
-                    <div>
-                        <h4>printed</h4>
-                        <p>{{ $data->print }}</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="date-content">
+                                    <h4>Registered</h4>
+                                    <p>{{ $data->register }}</p>
+                                </div>
+                                <div class="date-content">
+                                    <h4>collected</h4>
+                                    <p>{{ $data->collect }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="date-content">
+                                    <h4>Authenticated</h4>
+                                    <p>{{ $data->auth }}</p>
+                                </div>
+                                <div class="date-content">
+                                    <h4>printed</h4>
+                                    <p>{{ $data->print }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="referred">
@@ -179,18 +187,30 @@
                 </div>
             </div>
         </div>
-        <div class="table">
-            <div>Item Type</div>
-            <div>Item Name</div>
-            <div>Value</div>
-            <div>Test</div>
-            <div>Immunity PCR</div>
-            <div>{{ $data->price }}</div>
+        <div class="container">
+            <div class="col-md-9 text-center">
+                <div class="table">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="header">Item Type</div>
+                            <div class="footer">Test</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Item Type</div>
+                            <div class="footer">Immunity PCR</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="header">Value</div>
+                            <div class="footer">{{ $data->price }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="price">
             <div class="container">
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-md-9 col-12">
                         <div class="left">
                             <div class="top">
                                 <div class="left-info">
@@ -209,7 +229,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-12">
                         <div class="right">
                             <div>
                                 <h3>Total Amount:</h3>

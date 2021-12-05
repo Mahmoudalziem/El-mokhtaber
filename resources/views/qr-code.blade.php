@@ -21,9 +21,9 @@
             <img width="300px" height="110px" src="/img/logo.png" alt="">
         </div>
         <div class="qr mx-auto mt-5 text-center position-relative">
-            <div id="qrCode">
+            {{-- <div id="qrCode">
                 {!! QrCode::size(250)->generate(url('qr-code/' . $data->client_id)) !!}
-            </div>
+            </div> --}}
             <div class="content-btn">
                 <div class="col-md-6 col-12 mx-auto">
                     <div class="container">

@@ -47,7 +47,7 @@
                     color: #4550dd;
                 }
                 h3 {
-                    padding-top: 15px;
+                    padding: 2px;
                 }
             }
         }
@@ -64,6 +64,10 @@
                 grid-template-rows: repeat(2, 59px);
                 grid-column: span 3;
                 align-items: center;
+                .date-content {
+                    display: flex;
+                    text-align: left;
+                }
                 .col-5,
                 .col-2 {
                     text-align: left;
@@ -191,24 +195,29 @@
         }
     }
     .table {
-        width: 70rem;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 4fr 1fr;
-        text-align: center;
-        div {
-            border: solid 1.5px black;
-            padding: 15px;
-            &:nth-child(1) {
-                background-color: #b09caf;
+        .col-md-4 {
+            padding: 0 !important;
+            border: 1px solid #000;
+            .header {
+                background-color: #bfbbbb;
             }
-            &:nth-child(2) {
-                background-color: #b09caf;
-            }
-            &:nth-child(3) {
-                background-color: #979797;
+            .footer {
+                // background-color: #6e6565;
             }
         }
+        // div {
+        //     border: solid 1.5px black;
+        //     padding: 15px;
+        //     &:nth-child(1) {
+        //         background-color: #b09caf;
+        //     }
+        //     &:nth-child(2) {
+        //         background-color: #b09caf;
+        //     }
+        //     &:nth-child(3) {
+        //         background-color: #979797;
+        //     }
+        // }
     }
     .price {
         grid-template-columns: 3fr 1fr;
@@ -222,9 +231,8 @@
                 line-height: 2rem;
             }
             .bottom {
-                border: solid 1.5px black;
+                border: solid 1.5px #afa9a9ad;
                 text-align: center;
-                width: 45rem;
                 padding: 10px 20px;
             }
         }
