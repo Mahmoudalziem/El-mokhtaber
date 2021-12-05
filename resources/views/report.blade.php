@@ -426,7 +426,7 @@
                 </div>
             </div>
             <div class="signature">
-                <img src='/img/sign.png' alt="">
+                <img src='{{ public_path('/img/sign.png') }}' alt="">
             </div>
         </div>
         <div class="first-footer">
