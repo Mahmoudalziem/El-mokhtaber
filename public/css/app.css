@@ -14382,10 +14382,20 @@ body {
 }
 
 .qr-code {
-  padding-left: 60px;
+  text-align: center;
+  border: 20px solid #000;
+  width: 200px;
+  position: relative;
+  height: 200px;
+  border-radius: 0 0 20px 20px;
 }
 .qr-code svg {
-  width: 200px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 1px solid #fff;
 }
 
 .rating {
@@ -14448,6 +14458,7 @@ p {
 
 .content-btn .row {
   align-items: flex-end;
+  justify-content: space-evenly;
 }
 
 .btn {

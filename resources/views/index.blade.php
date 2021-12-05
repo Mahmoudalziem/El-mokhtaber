@@ -32,7 +32,7 @@
                     <td>{{$item->result}}</td>
                     <td>{{$item->client_id}}</td>
                     <td>{{$item->created_at}}</td>
-                    <td><a href={{url('report/'.$item->client_id)}} target='_blank'><button class="btn btn-primary">  View  </button></a></td>
+                    <td><a href={{url('qr-code/'.$item->client_id)}} target='_blank'><button class="btn btn-primary">  View  </button></a></td>
                 </tr>
             @endforeach
         </tbody>

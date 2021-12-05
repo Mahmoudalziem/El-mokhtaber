@@ -28,11 +28,11 @@
                 <div class="col-md-6 col-12 mx-auto">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 col-12">
+                            {{-- <div class="col-lg-4 col-12">
                                 <button class="btn btn-primary mt-5" onclick="downloadSVG()">تنزيل ال Qr-Code</button>
-                            </div>
+                            </div> --}}
                             <div class="col-lg-4 col-12">
-                                <a class="btn mt-5" href="{{ route('pdf', $data->client_id) }}">طباعة التقرير</a>
+                                <a class="btn mt-5" href="{{ route('pdf', $data->client_id) }}">Open Result</a>
                             </div>
                             <div class="col-lg-4 col-12">
                                 <a class="btn mt-5" href="{{ url('report/' . $data->client_id) }}">مشاهدة

@@ -13,7 +13,11 @@
 <div class="form-add">
     {{-- <img src="img/bg.jpg" alt="background"/> --}}
     <div class="container position-relative">
-        <h1 style="text-align: center;padding: 50px;font-size:60px;color:#fff">معمل المختبر</h1>
+        <h1 style="text-align: center;padding: 50px;font-size:60px;color:#fff">
+            <a href="/all">
+                معمل المختبر
+            </a>
+        </h1>
         <form class='mainform' method="post" action="{{ route('store') }}">
             @csrf
             @method('POST')

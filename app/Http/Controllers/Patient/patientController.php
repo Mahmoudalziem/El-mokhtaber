@@ -129,21 +129,12 @@ class patientController extends Controller
 
         $data = Patients::where('client_id', $id)->first();
 
-        // File::put(
-        //     'test.html',
-        //     view('report')
-        //         ->with(['data' => $data])
-        //         ->render()
-        // );
-
-
         return PDF::loadView('report', ['data' => $data])
-            // ->setNodeBinary('/usr/local/bin/node')
-            //  ->setNpmBinary('/usr/local/bin/npm')
-            // ->landscape()
-            // ->setIncludePath(base_path('node_modules/puppeteer/lib/cjs/puppeteer/node') . ':/usr/local/bin')
-            ->paperSize(430, 260)
-            ->download($data->name . '.pdf');
+            ->setNodeBinary('/usr/local/bin/node')
+            ->setNpmBinary('/usr/local/bin/npm')
+            ->paperSize(430, 500)
+            ->inline();
+            // ->download($data->name . '.pdf');
     }
 
     /**
