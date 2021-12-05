@@ -130,8 +130,8 @@ class patientController extends Controller
         $data = Patients::where('client_id', $id)->first();
 
         return PDF::loadView('report', ['data' => $data])
-            ->setNodeBinary('/usr/local/bin/node')
-            ->setNpmBinary('/usr/local/bin/npm')
+            // ->setNodeBinary('/usr/local/bin/node')
+            // ->setNpmBinary('/usr/local/bin/npm')
             ->paperSize(430, 500)
             ->inline();
             // ->download($data->name . '.pdf');
