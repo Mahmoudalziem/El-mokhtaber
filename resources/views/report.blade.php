@@ -149,7 +149,7 @@
             margin-inline: auto;
             font-size: 20px;
             width: 100%;
-            background-color: #a7a3a3;
+            background-color: #eac7c5;
             padding-block: 4px;
             border: 2px solid #000;
         }
@@ -503,7 +503,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="col-md-9 text-center">
+            <div class="col-md-11">
                 <div class="table">
                     <div class="row">
                         <div class="col-md-4">
