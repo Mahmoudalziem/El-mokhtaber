@@ -252,6 +252,7 @@
         }
 
         .body-container .table .col-md-4 {
+            position: relative;
             padding: 0 !important;
             border: 1px solid #000;
         }
