@@ -14458,7 +14458,7 @@ p {
 
 .content-btn .row {
   align-items: flex-end;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .btn {
