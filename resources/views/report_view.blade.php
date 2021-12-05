@@ -96,11 +96,7 @@
         <div class="main-body"></div>
         <div class="extra">
             <div class="text-center" style="padding-left : 50px">
-                <div style="background: #000;
-                    color: #fff;
-                    font-size: 20px;
-                    font-weight: 600;
-                    border-radius:20px 20px 0 0">Scan Me</div>
+                <div class="scan">Scan Me !</div>
                 <div class="qr-code">
                     {!! QrCode::size(250)->generate(url('qr-code/' . $data->client_id)) !!}
                 </div>
