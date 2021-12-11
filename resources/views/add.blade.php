@@ -128,6 +128,7 @@
                                 <option value="">اختار الفرع ...</option>
                                 <option {{ old('Naga Hamady') == 'Naga Hamady' ? 'Selected' : '' }} value="Naga Hamady">نجح حمادي</option>
                                 <option {{ old('Mansoura 3 (Gehan)') == 'Mansoura 3 (Gehan)' ? 'Selected' : '' }} value="Mansoura 3 (Gehan)">المنصورة</option>
+                                <option {{ old('Zagazig (Gehan)') == 'Zagazig (Gehan)' ? 'Selected' : '' }} value="Zagazig (Gehan)">الشرقية</option>
                             </select>
                             @error('branch')
                                 <div class="alert alert-danger">{{ $message }}</div>
