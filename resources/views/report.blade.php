@@ -330,7 +330,14 @@
     <div class="body-container">
         <header>
             <div>
-                <h2>اسم الفرع المنصورة</h2>
+                <h2>اسم الفرع @if ($data->branch ===  "Mansoura 3 (Gehan)")
+                        المنصورة 3
+                    @elseif ($data->branch ===  "Zagazig (Gehan)")
+                       الشرقية
+                    @else
+                        نجح حمادي
+                    @endif
+                </h2>
                 <h2>مدير الفرع د.احمد عبدالوكيل</h2>
                 <h2>مدير الوحده ا.د. عزة العدوي</h2>
                 <h2>طبيب الوحده د.ايمان ياسين</h2>
