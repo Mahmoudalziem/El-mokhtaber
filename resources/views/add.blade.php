@@ -187,18 +187,21 @@
     <script>
         $("#register").datetimepicker({
             format: 'yyyy-mm-dd HH:ii:ss',
+            use24hours: true,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
         });
         $("#print").datetimepicker({
             format: 'yyyy-mm-dd HH:ii:ss',
+            use24hours: true,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
         });
         $("#auth").datetimepicker({
             format: 'yyyy-mm-dd HH:ii:ss',
+            use24hours: true,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
@@ -206,6 +209,7 @@
 
         $("#collect").datetimepicker({
             format: 'yyyy-mm-dd HH:ii:ss',
+            use24hours: true,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
