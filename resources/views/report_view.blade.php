@@ -64,14 +64,15 @@
                                     <p>{{ $data->register }}</p>
                                 </div>
                                 <div class="date-content">
-                                    <h4>collected</h4>
-                                    <p>{{ $data->collect }}</p>
+                                    <h4>Authenticated</h4>
+                                    <p>{{ $data->auth }}</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
+                                
                                 <div class="date-content">
-                                    <h4>Authenticated</h4>
-                                    <p>{{ $data->auth }}</p>
+                                    <h4>collected</h4>
+                                    <p>{{ $data->collect }}</p>
                                 </div>
                                 <div class="date-content">
                                     <h4>printed</h4>

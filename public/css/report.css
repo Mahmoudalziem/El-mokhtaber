@@ -48,6 +48,7 @@
 }
 .body-container .container-fluid .left .name h3 {
   padding: 2px;
+  font-weight: bold;
 }
 .body-container .container-fluid .right {
   text-align: center;
@@ -162,6 +163,7 @@
 }
 .body-container .container2 .left .name h3 {
   padding-top: 15px;
+  font-weight: bold;
 }
 .body-container .container2 .right {
   text-align: center;

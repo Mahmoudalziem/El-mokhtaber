@@ -186,21 +186,21 @@
     <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script>
         $("#register").datetimepicker({
-            format: 'yyyy-mm-dd HH:mm:ss',
-            use24hours: true,
+            format: 'dd-mm-yyyy HH:mm:ss',
+            pick12HourFormat: false,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
         });
         $("#print").datetimepicker({
-            format: 'yyyy-mm-dd HH:mm:ss',
-            use24hours: true,
+            format: 'dd-mm-yyyy HH:mm:ss',
+            showMeridian: false,
             autoclose: true,
             todayBtn: true,
             pickerPosition: "bottom-left"
         });
         $("#auth").datetimepicker({
-            format: 'yyyy-mm-dd HH:mm:ss',
+            format: 'dd-mm-yyyy HH:mm:ss',
             use24hours: true,
             autoclose: true,
             todayBtn: true,
@@ -208,7 +208,7 @@
         });
 
         $("#collect").datetimepicker({
-            format: 'yyyy-mm-dd HH:mm:ss',
+            format: 'dd-mm-yyyy HH:mm:ss',
             use24hours: true,
             autoclose: true,
             todayBtn: true,

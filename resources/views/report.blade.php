@@ -78,6 +78,7 @@
 
         .body-container .container-fluid .left .name h3 {
             padding: 2px;
+            font-weight: bold;
         }
 
         .body-container .container-fluid .right {
@@ -215,6 +216,7 @@
 
         .body-container .container2 .left .name h3 {
             padding-top: 15px;
+            font-weight: bold;
         }
 
         .body-container .container2 .right {
@@ -381,14 +383,15 @@
                                     <p>{{ $data->register }}</p>
                                 </div>
                                 <div class="date-content">
-                                    <h4>collected</h4>
-                                    <p>{{ $data->collect }}</p>
+                                    <h4>Authenticated</h4>
+                                    <p>{{ $data->auth }}</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
+
                                 <div class="date-content">
-                                    <h4>Authenticated</h4>
-                                    <p>{{ $data->auth }}</p>
+                                    <h4>collected</h4>
+                                    <p>{{ $data->collect }}</p>
                                 </div>
                                 <div class="date-content">
                                     <h4>printed</h4>
