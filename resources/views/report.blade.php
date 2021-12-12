@@ -48,7 +48,7 @@
         .body-container .container-fluid {
             height: 242px;
             padding: 0;
-            border: solid 2px grey;
+            border: solid 3px grey;
             display: grid;
             grid-template-columns: 1fr 2fr;
             margin-top: 40px;
