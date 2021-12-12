@@ -17,7 +17,7 @@
                 <h2>اسم الفرع @if ($data->branch ===  "Mansoura 3 (Gehan)")
                     المنصورة 3
                 @elseif ($data->branch ===  "Zagazig (Gehan)")
-                   الشرقية
+                الزقازيق
                 @else
                     نجح حمادي
                 @endif</h2>
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                
+
                                 <div class="date-content">
                                     <h4>collected</h4>
                                     <p>{{ $data->collect }}</p>
