@@ -130,9 +130,9 @@
                         <div class="mb-3">
                             <select name="branch" id="inputState" class="form-select">
                                 <option value="">اختار الفرع ...</option>
-                                <option selected="{{ $data->branch === 'Naga Hamady' ? true : '' }}" value="Naga Hamady">نجح حمادي</option>
-                                <option selected="{{ $data->branch === 'Mansoura 3 (Gehan)' ? true : '' }}" value="Mansoura 3 (Gehan)">المنصورة</option>
-                                <option selected="{{ $data->branch === 'Zagazig (Gehan)' ? true : '' }}" value="Zagazig (Gehan)">الشرقية</option>
+                                <option selected={{ $data->branch === 'Naga Hamady' ? 'selected' : '' }} value="Naga Hamady">نجح حمادي</option>
+                                <option selected={{ $data->branch === 'Mansoura 3 (Gehan)' ? 'selected' : '' }} value="Mansoura 3 (Gehan)">المنصورة</option>
+                                <option selected={{ $data->branch === 'Zagazig (Gehan)' ? 'selected' : false }} value="Zagazig (Gehan)">الزقازيق</option>
                             </select>
                             @error('branch')
                                 <div class="alert alert-danger">{{ $message }}</div>
