@@ -16,6 +16,12 @@
                 معمل المختبر
             </a>
         </h1>
+        @if (session()->has('message'))
+        <div class="alert alert-success mt-2 mx-auto message" style="border-radius:0;text-align:center;font-size:30px"
+            role="alert">
+            {{ session('message') }}
+        </div>
+    @endif
         <form class='mainform' method="post" action="{!! route('update',$data->client_id) !!}">
             @csrf
             @method('PUT')

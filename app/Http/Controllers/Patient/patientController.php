@@ -174,17 +174,11 @@ class patientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Patients::where('client_id',$id)->first();
-
-        // $data->unset(['_token']);
-
-        // $data->unset(['client_id']);
-
-        // $data->update($request->all());
+        $data = Patients::where('client_id',$id)->update($request->except(['_token','_method']));
 
         session()->flash('message', "تم تعديل التحليل بنجاح");
 
-        return redirect('edit/' . $request->client_id);
+        return redirect('edit/' . $id);
     }
 
     /**
