@@ -160,7 +160,9 @@ class patientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Patients::where('client_id', $id)->first();
+
+        return view('edit',['data' => $data]);
     }
 
     /**
@@ -172,7 +174,17 @@ class patientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Patients::where('client_id',$id)->first();
+
+        // $data->unset(['_token']);
+
+        // $data->unset(['client_id']);
+
+        // $data->update($request->all());
+
+        session()->flash('message', "تم تعديل التحليل بنجاح");
+
+        return redirect('edit/' . $request->client_id);
     }
 
     /**
