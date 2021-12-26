@@ -1,0 +1,48 @@
+.table {
+    thead {
+        tr {
+            th {
+                border: 2px solid #fff;
+                text-align: center;
+                font-size: 20px;
+                padding: 15px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border: 2px solid #fff;
+                line-height: 50px;
+                font-size: 18px;
+                font-weight: 600;
+                text-align: center;
+                &.actions {
+                    display: flex;
+                    justify-content: center;
+                    a {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 40px;
+    nav {
+        margin: auto;
+        div {
+            font-size: 30px;
+            font-weight: 600;
+            a,
+            span {
+                font-size: 40px;
+            }
+        }
+    }
+    .hidden {
+        display: none;
+    }
+}

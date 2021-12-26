@@ -19,7 +19,7 @@ class patientController extends Controller
 
     public function index()
     {
-        $data = Patients::All();
+        $data = Patients::paginate(3);
 
         return view('index', ['data' => $data]);
     }
