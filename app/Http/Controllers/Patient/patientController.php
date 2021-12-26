@@ -19,7 +19,7 @@ class patientController extends Controller
 
     public function index()
     {
-        $data = Patients::paginate(3);
+        $data = Patients::paginate(15);
 
         return view('index', ['data' => $data]);
     }
@@ -132,7 +132,7 @@ class patientController extends Controller
         return PDF::loadView('report', ['data' => $data])
             // ->setNodeBinary('/usr/local/bin/node')
             // ->setNpmBinary('/usr/local/bin/npm')
-            ->paperSize(390, 500)
+            ->paperSize(340, 500)
             // ->inline();
             ->download($data->name . '.pdf');
     }
