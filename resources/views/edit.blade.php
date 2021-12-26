@@ -86,9 +86,10 @@
                             <div class="mb-3">
                                 <select name="gender" id="inputState" class="form-select">
                                     <option value="">اختار الجنس ...</option>
-                                    <option selected="{{ $data->gender === 'male' ? true : '' }}" value="male">ذكر
+                                    <option {{ $data->gender === 'male' ? 'selected="selected"' : '' }} value="male">ذكر
                                     </option>
-                                    <option selected="{{ $data->gender === 'female' ? true : '' }}" value="female">انثي
+                                    <option {{ $data->gender === 'female' ? 'selected="selected"' : '' }} value="female">
+                                        انثي
                                     </option>
                                 </select>
                                 @error('gender')
@@ -174,9 +175,10 @@
                     <div class="mb-5">
                         <select name="result" id="inputState" class="form-select">
                             <option value="">اختار التحليل</option>
-                            <option selected="{{ $data->result === 'negative' ? true : '' }}" value="negative">سالب
+                            <option {{ $data->result === 'negative' ? 'selected="selected"' : '' }} value="negative">
+                                سالب
                             </option>
-                            <option selected="{{ $data->result === 'postive' ? true : '' }}" value="postive">موجب
+                            <option {{ $data->result === 'postive' ? 'selected="selected"' : '' }} value="postive">موجب
                             </option>
                         </select>
                         @error('result')
