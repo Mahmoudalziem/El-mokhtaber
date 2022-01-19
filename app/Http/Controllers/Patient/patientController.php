@@ -172,14 +172,15 @@ class patientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $data = Patients::where('client_id',$id)->update($request->except(['_token','_method']));
+    
+    // public function update(Request $request, $id)
+    // {
+    //     $data = Patients::where('client_id',$id)->update($request->except(['_token','_method']));
 
-        session()->flash('message', "تم تعديل التحليل بنجاح");
+    //     session()->flash('message', "تم تعديل التحليل بنجاح");
 
-        return redirect('edit/' . $id);
-    }
+    //     return redirect('edit/' . $id);
+    // }
 
     /**
      * Remove the specified resource from storage.
