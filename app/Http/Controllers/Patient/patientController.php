@@ -70,52 +70,52 @@ class patientController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    // public function store(Request $request)
-    // {
+    public function store(Request $request)
+    {
 
-    //     $validated = $request->validate([
-    //         'name' => 'required|unique:patients,name',
-    //         'age' => 'required|numeric',
-    //         'register' => 'required|date',
-    //         'collect' => 'required|date',
-    //         'auth' => 'required|date',
-    //         'print' => 'required|date',
-    //         'gender' => 'required',
-    //         'visit_date' => 'required',
-    //         'pay_date' => 'required',
-    //         'result_date' => 'required',
-    //         'branch' => 'required',
-    //         'pay_username' => 'required',
-    //         'price' => 'required',
-    //         'visit' => 'required',
-    //         'result' => 'required'
-    //     ], [
-    //         'name.required' => 'الاسم مطلوب',
-    //         'age.required' => 'السن مطلوب',
-    //         'register.required' => 'تاريخ التسجيل مطلوب',
-    //         'collect.required' => 'تاريخ التحصيل مطلوب',
-    //         'auth.required' => 'تاريخ التصديق مطلوب',
-    //         'print.required' => 'تاريخ الطباعة مطلوب',
-    //         'gender.required' => 'الجنس مطلوب',
-    //         'visit_date.required' => 'تاريخ الزيارة مطلوب',
-    //         'pay_date.required' => 'تاريخ الدفع مطلوب',
-    //         'result_date.required' => 'تاريخ النتيجة مطلوب',
-    //         'branch.required' => 'الفرع مطلوب',
-    //         'pay_username.required' => 'اسم الدافع مطلوب',
-    //         'price.required' => 'السعر مطلوب',
-    //         'visit.required' => 'رقم الزيارة مطلوب',
-    //         'result.required' => 'التحليل مطلوب'
+        $validated = $request->validate([
+            'name' => 'required|unique:patients,name',
+            'age' => 'required|numeric',
+            'register' => 'required|date',
+            'collect' => 'required|date',
+            'auth' => 'required|date',
+            'print' => 'required|date',
+            'gender' => 'required',
+            'visit_date' => 'required',
+            'pay_date' => 'required',
+            'result_date' => 'required',
+            'branch' => 'required',
+            'pay_username' => 'required',
+            'price' => 'required',
+            'visit' => 'required',
+            'result' => 'required'
+        ], [
+            'name.required' => 'الاسم مطلوب',
+            'age.required' => 'السن مطلوب',
+            'register.required' => 'تاريخ التسجيل مطلوب',
+            'collect.required' => 'تاريخ التحصيل مطلوب',
+            'auth.required' => 'تاريخ التصديق مطلوب',
+            'print.required' => 'تاريخ الطباعة مطلوب',
+            'gender.required' => 'الجنس مطلوب',
+            'visit_date.required' => 'تاريخ الزيارة مطلوب',
+            'pay_date.required' => 'تاريخ الدفع مطلوب',
+            'result_date.required' => 'تاريخ النتيجة مطلوب',
+            'branch.required' => 'الفرع مطلوب',
+            'pay_username.required' => 'اسم الدافع مطلوب',
+            'price.required' => 'السعر مطلوب',
+            'visit.required' => 'رقم الزيارة مطلوب',
+            'result.required' => 'التحليل مطلوب'
 
-    //     ]);
+        ]);
 
-    //     $request->merge(['name' => strtoupper($request->name), 'patient_id' => rand(1334539220, 3334539220), 'client_id' => rand(13345, 333467)]);
+        $request->merge(['name' => strtoupper($request->name), 'patient_id' => rand(1334539220, 3334539220), 'client_id' => rand(13345, 333467)]);
 
-    //     $data = Patients::create($request->except('_token'));
+        $data = Patients::create($request->except('_token'));
 
-    //     session()->flash('message', "تم تسجيل التحليل بنجاح");
+        session()->flash('message', "تم تسجيل التحليل بنجاح");
 
-    //     return redirect('qr-code/' . $request->client_id)->withInput(['data' => $data])->withErrors($validated);
-    // }
+        return redirect('qr-code/' . $request->client_id)->withInput(['data' => $data])->withErrors($validated);
+    }
 
 
     /**
