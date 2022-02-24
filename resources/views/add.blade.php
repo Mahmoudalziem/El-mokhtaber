@@ -129,6 +129,8 @@
                                 <option {{ old('Naga Hamady') == 'Naga Hamady' ? 'Selected' : '' }} value="Naga Hamady">نجح حمادي</option>
                                 <option {{ old('Mansoura 3 (Gehan)') == 'Mansoura 3 (Gehan)' ? 'Selected' : '' }} value="Mansoura 3 (Gehan)">المنصورة</option>
                                 <option {{ old('Zagazig (Gehan)') == 'Zagazig (Gehan)' ? 'Selected' : '' }} value="Zagazig (Gehan)">الشرقية</option>
+                                <option {{ old('Bani Sweif') == 'Bani Sweif' ? 'Selected' : '' }} value="Bani Sweif">بني سويف</option>
+                                <option {{ old('Mohandessin') == 'Mohandessin' ? 'Selected' : '' }} value="Mohandessin">المهندسين</option>
                             </select>
                             @error('branch')
                                 <div class="alert alert-danger">{{ $message }}</div>

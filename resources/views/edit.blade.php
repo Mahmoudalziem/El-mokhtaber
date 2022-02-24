@@ -139,6 +139,8 @@
                                         value="Mansoura 3 (Gehan)">المنصورة</option>
                                     <option {{ $data->branch === 'Zagazig (Gehan)' ? 'selected="selected"' : '' }}
                                         value="Zagazig (Gehan)">الزقازيق</option>
+                                    <option {{ $data->branch === 'Bani Sweif' ? 'selected="selected"' : '' }} value="Bani Sweif">بني سويف</option>
+                                    <option {{ $data->branch === 'Mohandessin' ? 'selected="selected"' : '' }} value="Mohandessin">المهندسين</option>
                                 </select>
                                 @error('branch')
                                     <div class="alert alert-danger">{{ $message }}</div>
